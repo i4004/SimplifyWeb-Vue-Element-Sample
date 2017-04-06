@@ -11,13 +11,6 @@
 		{{message}}
 	</div>
 
-	<script>
-		var v = new Vue({
-			el: '#app',
-			data: {
-				message: 'Hello Vue.js!'
-			}
-		})
-	</script>
+	<script type="text/javascript" src="{~}/App/Main.js"></script>
 </body>
 </html>
