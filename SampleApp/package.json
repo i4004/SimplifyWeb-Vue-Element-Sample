@@ -1,9 +1,0 @@
-{
-  "name": "sampleapp",
-  "version": "1.0.0",
-  "description": "Example of using Simplify.Web with Vue.js ",
-  "private": true,
-  "devDependencies": {
-    "vue": "^2.2.6"
-  }
-}

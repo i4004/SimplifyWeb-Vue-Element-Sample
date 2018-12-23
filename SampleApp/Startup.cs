@@ -1,13 +1,26 @@
-﻿using Owin;
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.SpaServices.AngularCli;
+using Microsoft.Extensions.Hosting;
 using Simplify.Web.Owin;
 
 namespace SampleApp
 {
 	public class Startup
 	{
-		public void Configuration(IAppBuilder app)
+		public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 		{
-			app.UseSimplifyWeb();
+			if (env.IsDevelopment())
+				app.UseDeveloperExceptionPage();
+
+			app.UseSimplifyWebNonTerminal();
+
+			app.UseSpa(spa =>
+			{
+				spa.Options.SourcePath = "ClientApp";
+
+				if (env.IsDevelopment())
+					spa.UseAngularCliServer("start");
+			});
 		}
 	}
 }
