@@ -1,3 +1,4 @@
+## Moved [here](https://github.com/i4004/Simplify.Web/tree/master/src/SampleApps/SampleApp.Vue.Element)
 ## Usage
 
 1. Clone this project
